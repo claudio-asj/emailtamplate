@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+    <main style=" font-family: Verdana, sans-serif; margin: 0 auto;">
+        <div style="display: flex; width: 100%; align-items: center; justify-content: center; gap: 50px; background-color: #EEEEEE; padding: 10px 0;">
+            <img src="./babaloo.png" alt="">
+            <h1 style="font-size: 30px; font-weight: 200; margin: 0;">Alterar senha.</h1>
+        </div>
+
+        <div style="width: 80%; margin: 2rem auto; display: flex; flex-direction: column;">
+            <h2 style="font-size: 15px; margin: 5px 0; font-weight: 100;">👋 Olá, <strong th:text="${nome}">Luis Fernando</strong>! </h2>
+            <p  style="font-size: 15px; margin: 0;">Aparentemente você pediu para alterar a sua senha. Clique no link abaixo para cadastrar uma nova senha. <br/> <a href="#" th:href="${linkAtivation}">CLIQUE AQUI</a></p> 
+        </div>
+        <div style="width: 100%; display: flex; width: 100%; align-items: center; justify-content: center; margin: 50px 0;">
+            <p  style="font-size: 15px; margin: 0 auto;">Este é um e-mail automatico, não é necessario respondê-lo.</p>
+        </div>
+    </main>
+  </body>
+</html>

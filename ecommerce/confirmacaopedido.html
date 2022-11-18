@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+    <main style=" font-family: Verdana, sans-serif; margin: 0 auto;">
+        <div style="display: flex; width: 100%; align-items: center; justify-content: center; gap: 50px; background-color: #EEEEEE; padding: 10px 0;">
+            <img src="./babaloo.png" alt="">
+            <h1 style="font-size: 30px; font-weight: 200; margin: 0;">Confirmação de pedido.</h1>
+        </div>
+
+        <div style="width: 80%; margin: 2rem auto; display: flex; flex-direction: column;">
+            
+            <h2 style="font-size: 15px; margin: 5px 0; font-weight: 100;">👋 Olá, <strong th:text="${nome}">Luis Fernando</strong> </h2>
+            <p  style="font-size: 15px; margin: 0;">Seu pedido 2333434 foi confirmado.<br> A loja já foi notificada e sua compra estará disponível para retirada</p>
+            <h3 style="text-align: center; background-color: #EEEEEE;">Detalhes do pedido</h3>
+            <table>
+              <tbody>
+                <tr th:each="prod: ${produtocarrinho}">
+                  <td><img src="./download.jpeg" style="width: 50px;"></td>
+                  <td th:text="${prod.name}">Oranges</td>
+                  <td th:text="${#numbers.formatDecimal(prod.priceUni, 1, 2)}">0.99</td>
+                  <td>2x</td>
+                  <td th:text="${#numbers.formatDecimal(prod.price, 1, 2)}">0.99</td>
+                </tr>
+
+                <tr th:each="prod: ${produtocarrinho}">
+                  <td><img src="./download.jpeg" style="width: 50px;"></td>
+                  <td th:text="${prod.name}">Oranges</td>
+                  <td th:text="${#numbers.formatDecimal(prod.priceUni, 1, 2)}">0.99</td>
+                  <td>2x</td>
+                  <td th:text="${#numbers.formatDecimal(prod.price, 1, 2)}">0.99</td>
+                </tr>
+            </table>
+            <div style="width: 100%; display: flex; justify-content: space-between;">
+              <p style="font-size: 12px;">total de itens: 2</p>
+              <p style="font-size: 15px;">Total: <strong>R$ 4,00</strong></p>
+              </div>
+            </tbody>
+        </div>
+        <div style="width: 100%; display: flex; width: 100%; align-items: center; justify-content: center; margin: 50px 0;">
+            <p  style="font-size: 15px; margin: 0 auto;">Este é um e-mail automatico, não é necessario respondê-lo.</p>
+        </div>
+    </main>
+  </body>
+</html>
